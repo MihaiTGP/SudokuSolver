@@ -40,6 +40,7 @@ def draw_lines():
     pygame.draw.rect(WIN, BLACK, line2)
     pygame.draw.rect(WIN, BLACK, line3)
     pygame.draw.rect(WIN, BLACK, line4)
+    
 #Drawing the grid(9x9 squares)
 def draw_grid():
     for y in range(0, int(GRID_HEIGHT)):
@@ -93,16 +94,18 @@ def main():
                     solved = True  #And don't let the user change the grid anymore
 
                 elif selected_cell != None: #Else add to the grid that number
-                    user_text = event.unicode
-                    grid[selected_cell[1]][selected_cell[0]] = user_text
-                    selected_cell = None
+                    if is_valid(grid, event.unicode, selected_cell[1], selected_cell[0]): #If the position is valid
+                        user_text = event.unicode
+                        grid[selected_cell[1]][selected_cell[0]] = user_text
+                        selected_cell = None
+                    else: #If the position isn't valid
+                        pass
 
         #Drawing everthing and updating the display
         draw_grid()
         draw_lines()
         draw_numbers(grid)
         pygame.display.update()
-
 
 if __name__ == '__main__':
     main()

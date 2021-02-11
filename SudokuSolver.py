@@ -41,13 +41,13 @@ def solve_sudoku(grid):
     #If there is no possible solution, return False
     return False
 #This function is to transform the grid so the text_surface doesn't throw an error
-def string_to_integer(grid): #First we change all of the elements on the grid into strings, so solve_sudoku() can work
+def string_to_integer(grid): #First we change all of the elements on the grid into integers, so solve_sudoku() can work
     for row in range(9):
         for col in range(9):
             if grid[row][col] != '':
                 grid[row][col] = int(grid[row][col])
 
-def integer_to_string(grid): #Then we change all of the numbers on the grid into integers, so text_surface works
+def integer_to_string(grid): #Then we change all of the numbers on the grid into strings, so text_surface works
     for row in range(9):
         for col in range(9):
             grid[row][col] = str(grid[row][col])

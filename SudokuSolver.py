@@ -51,4 +51,3 @@ def integer_to_string(grid): #Then we change all of the numbers on the grid into
     for row in range(9):
         for col in range(9):
             grid[row][col] = str(grid[row][col])
-

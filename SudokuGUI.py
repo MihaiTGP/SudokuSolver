@@ -105,7 +105,7 @@ def main():
 
                 elif selected_cell != None: # else add to the grid that number
                     if event.key == pygame.K_BACKSPACE or event.key == pygame.K_SPACE: # spacebar and backspace deletes the number
-                        grid[selected_cell[1]][selected_cell[0]] = None
+                        grid[selected_cell[1]][selected_cell[0]] = ''
                         selected_cell = None
                     elif is_valid(grid, event.unicode, selected_cell[1], selected_cell[0]): # if the position is valid
                         user_text = event.unicode

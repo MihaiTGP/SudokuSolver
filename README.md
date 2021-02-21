@@ -35,4 +35,4 @@ Changes:
 - It's probably one of the last updates of the game
 
 ## The Game
-![Sudoku GUI](https://imgflip.com/gif/4ywvvi)
+![](https://media.giphy.com/media/OSJbXOBdUojdpBGs7o/giphy.gif)

@@ -11,7 +11,7 @@ pip install -r requirements.txt
 python SudokuMenu.py
 ```
 ## Additional Notes
-1. Both files need to be in the same directory.
+1. The 3 main files and the Assets folder need to be in the same folder
 2. If u want to solve the sudoku, just press the TAB key. If you want to delete a number from the grid just press SPACE or BACKSPACE, press ESC to go back to the menu/exit
 4. This is version 2.0, this is almost the last update.
 

@@ -1,3 +1,19 @@
+#importing the necesary modules
+import random
+import numpy as np
+from dokusan import generators
+grid = [
+    ["", "", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", "", ""]
+]
+
 def find_next_empty(grid):
     """this function finds the next empty cell """
     for row in range(9):
@@ -54,3 +70,32 @@ def integer_to_string(grid):
     for row in range(9):
         for col in range(9):
             grid[row][col] = str(grid[row][col])
+
+def reset_grid(grid):
+    """ Transforms all the elements inside the grid to blank spaces"""
+    for row in range(9):
+        for col in range(9):
+            grid[row][col] = ""
+
+
+def add_numbers(grid):
+    """ Adds the numbers to the grid, between 26-32 """
+    array = []
+    arr = np.array(list(str(generators.random_sudoku(avg_rank=150))))
+    array = arr.reshape(9, 9)
+    for row in range(9):
+        for col in range(9):
+            if array[row][col] == '0':
+                grid[row][col] = ""
+            else:
+                grid[row][col] = array[row][col]
+
+    return array
+
+def check_win(grid):
+    """Checks if the user has won"""
+    for row in range(9):
+        if ''  in grid[row]:
+            return  False
+
+    return True

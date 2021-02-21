@@ -1,5 +1,5 @@
-# SudokuSolver
-This is a sudoku solver made with Python and Pygame.
+# Sudoku
+This is a sudoku game made in python (also contains a solver).
 
 ## Installation
  You need to have Python 3, Pygame, Numpy and Dokusan installed
@@ -12,8 +12,8 @@ python SudokuMenu.py
 ```
 ## Additional Notes
 1. Both files need to be in the same directory.
-2. If u want to solve the sudoku, just press the TAB key. If you want to delete a number from the grid just press SPACE or BACKSPACE
-4. This is version 1.3, it may be updated in the next few days or weeks or until I feel I'm done with it.
+2. If u want to solve the sudoku, just press the TAB key. If you want to delete a number from the grid just press SPACE or BACKSPACE, press ESC to go back to the menu/exit
+4. This is version 2.0, this is almost the last update.
 
 ## Update Log:
 1.0 - Added the main files. (The user can still input letters and numbers even if it's not a valid position).

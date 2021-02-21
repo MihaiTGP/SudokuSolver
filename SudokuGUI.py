@@ -157,7 +157,7 @@ def main(gamemode):
                         grid[selected_cell[1]][selected_cell[0]] = ''
                         selected_cell = None
                     # if the position is valid                                                 You can't draw TAB or SPACE, they have other uses             you can't replace an item from the generated grid
-                    elif is_valid(grid, event.unicode, selected_cell[1], selected_cell[0]) and event.key != pygame.K_TAB and event.key != pygame.K_SPACE and grid[selected_cell[1]][selected_cell[0]] != array[selected_cell[1]][selected_cell[0]] or can_solve:
+                    elif is_valid(grid, event.unicode, selected_cell[1], selected_cell[0]) and event.key != pygame.K_TAB and event.key != pygame.K_SPACE and (grid[selected_cell[1]][selected_cell[0]] != array[selected_cell[1]][selected_cell[0]] or can_solve):
                         user_text = event.unicode
                         grid[selected_cell[1]][selected_cell[0]] = user_text
                         selected_cell = None
